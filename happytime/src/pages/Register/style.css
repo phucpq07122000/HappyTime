@@ -1,0 +1,80 @@
+
+body {
+  background-color: #F8F8F8;
+}
+h3{
+  color: orange;
+  text-align: center;
+}
+.card-container.card {
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+
+#logo {
+  align-self: center;
+  width: 50%;
+  /* margin-bottom: 10px; */
+}
+
+#registerForm .form-register {
+  width: 100%;
+  line-height: 10px;
+}
+
+#registerForm .form-register .form-control {
+  /* border: none; */
+  /* border-bottom: 1px solid #EEE; */
+  /* padding: 10px; */
+  font-size: 16px;
+  /* font-weight: 400; */
+  /* background-color: transparent; */
+  box-shadow: none;
+  width: 80%;
+  /* margin: 0 auto; */
+  /* margin-bottom: 10px; */
+}
+
+.form-control:focus {
+  border-color: orange;
+  box-shadow: none;
+}
+
+#register-check{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 56px;
+}
+
+.btn-register {
+  width: 50%;
+  background-color: orange;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.btn-register:hover,
+.btn-register:focus {
+  background-color: #fcc763;
+  color: white;
+}
+
+#loginText{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loginLink{
+  color: orange;
+}
+
