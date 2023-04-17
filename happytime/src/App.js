@@ -35,13 +35,13 @@ class App extends React.Component {
         <div>
           <MenuCtx.Provider value={this.state}>
             <Routes>
+              <Route path="/" element={<LoginPage />} />
+              <Route path="/register" element={<Register />} />
               <Route path="/" element={<Layout />}>
-                <Route path="/" element={<LoginPage />} />
                 <Route path="/home" index element={<Home />} />
                 <Route path="/bangCong" element={<BangCong />} />
                 <Route path="/ListTask" element={<ListTask />} />
                 <Route path="/quanLyNhanSu" element={<QuanLyNhanSu />} />
-                <Route path="/register" element={<Register />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
