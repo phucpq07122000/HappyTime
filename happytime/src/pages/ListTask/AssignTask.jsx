@@ -3,18 +3,13 @@ import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import "./style.css";
 
-const ListTask = () => {
+const TaskAssigned = () => {
   const [searchEmployees, setSearchEmployees] = useState();
-  const [searchEmployers, setSearchEmployers] = useState();
+  const [startDate, setStartDate] = useState();
   return (
     <div className="list-container">
       <div className="btn-list">
-        <NavLink
-          to="/listTask"
-          key="1"
-          className="btn-list-item"
-          style={{ borderLeft: "3px solid rgb(255, 159, 10)", color: "orange" }}
-        >
+        <NavLink to="/listTask" key="1" className="btn-list-item">
           <div className="btn-list-icon">
             <i className="fa-solid fa-table-list"></i>
           </div>
@@ -24,6 +19,7 @@ const ListTask = () => {
           to="/listTask/task-assignments"
           key="2"
           className="btn-list-item"
+          style={{ borderLeft: "3px solid rgb(255, 159, 10)", color: "orange" }}
         >
           <div className="btn-list-icon">
             <i className="fa-solid fa-calendar-day"></i>
@@ -31,30 +27,23 @@ const ListTask = () => {
           <div className="btn-list-name">Phân công</div>
         </NavLink>
       </div>
+
       <div className="list-content">
         {/* Main Content */}
         <div className="list-wrap">
           {/* Select Items */}
           <span>
-            <h6>DANH SÁCH CÔNG VIỆC</h6>
+            <h6>DANH SÁCH PHÂN CÔNG LÀM VIỆC</h6>
           </span>
-          <div className="list-wrap-container-task">
+          <div className="list-wrap-container-assign">
             <div>
               <Form.Select className="list-select-items">
-                <option>Trạng thái hoạt động</option>
-                <option value="1">Tất cả</option>
-                <option value="2">Đang hoạt động</option>
-                <option value="3">Chưa hoạt động</option>
+                <option>Đối tượng áp dụng</option>
+                <option value="1">Toàn phòng ban</option>
+                <option value="2">Vị trí công việc</option>
+                <option value="3">Nhân viên</option>
               </Form.Select>
             </div>
-            <div>
-              <Form.Select className="list-select-items">
-                <option>Loại công việc</option>
-                <option value="1">abc</option>
-                <option value="2">def</option>
-              </Form.Select>
-            </div>
-
             <form>
               <input
                 type="text"
@@ -69,15 +58,21 @@ const ListTask = () => {
             </form>
             <form>
               <input
-                type="text"
-                className="list-input"
-                value={searchEmployers}
-                placeholder="Nhập tên khách hàng"
-                onChange={(e) => setSearchEmployers(e.target.value)}
+                type="date"
+                className="list-input-date"
+                value={startDate}
+                placeholder="Ngày tạo"
+                onChange={(e) => setStartDate(e.target.value)}
               />
-              <button className="list-input-suffix">
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </button>
+            </form>
+            <form>
+              <input
+                type="date"
+                className="list-input-date"
+                value={startDate}
+                placeholder="Ngày tạo"
+                onChange={(e) => setStartDate(e.target.value)}
+              />
             </form>
             <button className="list-add-btn">
               <i className="fa-solid fa-plus"></i> THÊM MỚI
@@ -90,4 +85,4 @@ const ListTask = () => {
   );
 };
 
-export default ListTask;
+export default TaskAssigned;

@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Layout from "./Components/layouts/layout";
 
 import "./App.css";
+import TaskAssigned from "./pages/ListTask/AssignTask";
 
 const MenuCtx = React.createContext({
   isNavOpen: true,
@@ -43,6 +44,10 @@ class App extends React.Component {
                 <Route path="/ListTask" element={<ListTask />} />
                 <Route path="/quanLyNhanSu" element={<QuanLyNhanSu />} />
                 <Route path="*" element={<NotFound />} />
+                <Route
+                  path="/ListTask/task-assignments"
+                  element={<TaskAssigned />}
+                />
               </Route>
             </Routes>
           </MenuCtx.Provider>
