@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import "./style.css";
+import ListTaskTable from "./ListTaskTable/ListTaskTable";
 
 const ListTask = () => {
   const [searchEmployees, setSearchEmployees] = useState();
@@ -60,12 +61,9 @@ const ListTask = () => {
                 type="text"
                 className="list-input"
                 value={searchEmployees}
-                placeholder="Nhập tên nhân viên, mã nhân viên"
+                placeholder="Nhập tên nhân viên"
                 onChange={(e) => setSearchEmployees(e.target.value)}
               />
-              <button className="list-input-suffix">
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </button>
             </form>
             <form>
               <input
@@ -75,16 +73,17 @@ const ListTask = () => {
                 placeholder="Nhập tên khách hàng"
                 onChange={(e) => setSearchEmployers(e.target.value)}
               />
-              <button className="list-input-suffix">
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </button>
             </form>
             <button className="list-add-btn">
               <i className="fa-solid fa-plus"></i> THÊM MỚI
             </button>
           </div>
+          <div>
+          {/* Table */}
+          <ListTaskTable />
         </div>
-        <div>{/* Table */}</div>
+        </div>
+        
       </div>
     </div>
   );

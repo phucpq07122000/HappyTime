@@ -24,30 +24,6 @@ function Navbar({ isOpen = false, setOpen = () => {} }) {
         </div>
 
         <div className="nav-items-right">
-          {/* workspace btn */}
-          <button className="btn btn-1">
-            <div className="btn-left">
-              <span className="user-icon">
-                <i className="fa-solid fa-user"></i>
-              </span>
-              <span className="btn-text-wrap">
-                <p className="btn-bold-text">VTI</p>
-                <p>Workspace</p>
-              </span>
-            </div>
-
-            <span className="arrow-rotate-icon">
-              <i class="fa-solid fa-arrows-rotate"></i>
-            </span>
-          </button>
-
-          <button className="btn-2">
-            {/* workspace icon */}
-            <span className="grid-icon">
-              <i className="fa-solid fa-grip"></i>
-            </span>
-          </button>
-
           <button className="btn-3">
             {/* noti icon */}
             <span className="noti-icon">
@@ -67,12 +43,6 @@ function Navbar({ isOpen = false, setOpen = () => {} }) {
                 <span className="btn-left">
                   <i className="fa-solid fa-pen"></i>
                   <p className="dropdown-text">Thông tin cá nhân</p>
-                </span>
-              </Dropdown.Item>
-              <Dropdown.Item href="#/workspace">
-                <span className="btn-left">
-                  <i className="fa-regular fa-building"></i>
-                  <p className="dropdown-text">Cài đặt workspace</p>
                 </span>
               </Dropdown.Item>
               <Dropdown.Item>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Form from "react-bootstrap/Form";
 import "./style.css";
+import AssignTaskTable from "./AssignTaskTable/AssignTaskTable";
 
 const TaskAssigned = () => {
   const [searchEmployees, setSearchEmployees] = useState();
@@ -49,20 +50,17 @@ const TaskAssigned = () => {
                 type="text"
                 className="list-input"
                 value={searchEmployees}
-                placeholder="Nhập tên nhân viên, mã nhân viên"
+                placeholder="Nhập tên nhân viên"
                 onChange={(e) => setSearchEmployees(e.target.value)}
               />
-              <button className="list-input-suffix">
-                <i className="fa-solid fa-magnifying-glass"></i>
-              </button>
             </form>
             <form>
               <input
-                type="date"
-                className="list-input-date"
-                value={startDate}
-                placeholder="Ngày tạo"
-                onChange={(e) => setStartDate(e.target.value)}
+                type="text"
+                className="list-input"
+                value={searchEmployees}
+                placeholder="Nhập tên phòng ban"
+                onChange={(e) => setSearchEmployees(e.target.value)}
               />
             </form>
             <form>
@@ -78,8 +76,11 @@ const TaskAssigned = () => {
               <i className="fa-solid fa-plus"></i> THÊM MỚI
             </button>
           </div>
+          <div>
+            {/* Table */}
+            <AssignTaskTable />
+          </div>
         </div>
-        <div>{/* Table */}</div>
       </div>
     </div>
   );
