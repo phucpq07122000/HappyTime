@@ -26,7 +26,7 @@ const Sidebar = ({ isOpen }) => {
     },
   ];
   return (
-    <div className="">
+    <div>
       <div className="sidebar" style={{ width: isOpen ? "200px" : "80px" }}>
         {menuItem.map((item, index) => {
           return (

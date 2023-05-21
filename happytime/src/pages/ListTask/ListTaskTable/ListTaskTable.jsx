@@ -7,7 +7,7 @@ const ListTaskTable = () => {
       {/* Container */}
       <div>
         {/* Layout */}
-        haha
+        Table
       </div>
     </div>
   );

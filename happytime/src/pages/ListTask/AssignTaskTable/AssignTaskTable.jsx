@@ -2,7 +2,10 @@ import React from 'react'
 
 const AssignTaskTable = () => {
   return (
-    <div>AssignTaskTableaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <div>
+      {/* Layout */}
+      table
+    </div>
   )
 }
 

@@ -1,9 +1,21 @@
-.home-container{
-    margin: auto;
-    padding: 16px;
-    
+.home-container {
+  width: 100%;
+  margin: auto;
+  padding: 20px 20px 0px 20px;
 }
 
-h4{
-    color: orange;
+h4 {
+  color: orange;
+  margin-bottom: 5px;
+}
+
+.section-2 {
+  display: block;
+}
+
+@media (min-width: 720px) {
+  .section-2 {
+    display: flex;
+    gap: 20px;
+  }
 }

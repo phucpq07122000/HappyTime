@@ -1,14 +1,13 @@
 import React from "react";
-import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import LoginPage from "./pages/Login/login";
-import Register from "./pages/Register/register";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Home from "./pages/Home/Home";
 import BangCong from "./pages/BangCong/BangCong";
 import QuanLyNhanSu from "./pages/HRM/QuanLyNhanSu";
 import ListTask from "./pages/ListTask/ListTask";
 import NotFound from "./pages/NotFound/NotFound";
 import Layout from "./Components/layouts/layout";
-
+import LoginForm from "./pages/Login/LoginForm";
 import "./App.css";
 import TaskAssigned from "./pages/ListTask/AssignTask";
 
@@ -36,14 +35,13 @@ class App extends React.Component {
         <div>
           <MenuCtx.Provider value={this.state}>
             <Routes>
-              <Route path="/" element={<LoginPage />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/" element={<LoginForm />} />
+              <Route path="*" element={<NotFound />} />
               <Route path="/" element={<Layout />}>
                 <Route path="/home" index element={<Home />} />
                 <Route path="/bangCong" element={<BangCong />} />
                 <Route path="/ListTask" element={<ListTask />} />
                 <Route path="/quanLyNhanSu" element={<QuanLyNhanSu />} />
-                <Route path="*" element={<NotFound />} />
                 <Route
                   path="/ListTask/task-assignments"
                   element={<TaskAssigned />}

@@ -11,15 +11,15 @@ const Home = () => {
       <div className="home-container">
         {/* Layout */}
         <span>
-          <h4>Trang Chủ</h4>
+          <h4>Hôm nay</h4>
         </span>
         <section>
           <div className="section-1">
             <FirstBanner />
           </div>
           <div className="section-2">
-            <StatTable className="section-2.1" />
-            <PreviewTasks className="section-2.2" />
+            <StatTable className="section-2-left" />
+            <PreviewTasks className="section-2-right" />
           </div>
         </section>
       </div>
