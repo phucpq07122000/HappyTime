@@ -1,6 +1,6 @@
 .list-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
 }
 
 @media screen and (max-width: 992px) {

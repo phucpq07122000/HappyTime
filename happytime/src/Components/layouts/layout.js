@@ -9,11 +9,14 @@ export default () => {
     <div>
       <div>
         <Navbar isOpen={isOpen} setOpen={setOpen} />
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }} >
           <Sidebar className="container" isOpen={isOpen} />
           <div
             className="main-content"
-            style={{ marginLeft: isOpen ? "200px" : "80px" }}
+            style={{
+              marginLeft: isOpen ? "200px" : "80px",
+              maxWidth: isOpen ? "83vw" : "100vw",
+            }}
           >
             <Outlet />
           </div>

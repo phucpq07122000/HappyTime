@@ -4,9 +4,9 @@ import StatTable from "./HomeComponents/StatTable";
 import PreviewTasks from "./HomeComponents/PreviewTasks";
 import "./style.css";
 
-const Home = () => {
+const Home = ({ isOpen }) => {
   return (
-    <div>
+    <>
       {/* Container */}
       <div className="home-container">
         {/* Layout */}
@@ -23,7 +23,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 };
 
