@@ -29,8 +29,8 @@ class Person extends Component {
     const { LoginPerson } = this.state;
     return (
       <div className="btn-left">
-        <span className="">
-          <img width="40" src={LoginPerson.img} />
+        <span>
+          <img width="40" src={LoginPerson.img} style={{borderRadius: "50px"}}/>
         </span>
         <span className="btn-text-wrap">
           <p className="btn-bold-text">{LoginPerson.Name}</p>
