@@ -1,5 +1,8 @@
 .navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
+  z-index: 2;
   justify-content: space-between;
   background-color: white;
   filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
@@ -47,7 +50,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
-  padding: 0.1rem 0.65rem;
+  padding: 0;
   border-radius: 0.5rem;
   border: transparent;
 }
@@ -69,8 +72,9 @@
   border-color: rgb(254 215 170 / var(--tw-border-opacity));
 }
 
-.btn-2,
 .btn-3 {
+  padding: 0px;
+  border: 0px;
   border-color: transparent;
   background-color: transparent;
 }
@@ -107,7 +111,7 @@
 }
 
 .btn-4 {
-  margin-left: -1.5rem;
+  margin-left: -1rem;
   padding-right: 1.5rem;
 }
 

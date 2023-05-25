@@ -1,0 +1,22 @@
+.home-container {
+  width: 100%;
+  margin: auto;
+  padding: 20px 23px 0px 20px;
+}
+
+h4 {
+  color: orange;
+  margin-bottom: 5px;
+}
+
+.section-2 {
+  display: block;
+  max-width: 89vw;
+}
+
+@media (min-width: 720px) {
+  .section-2 {
+    display: flex;
+    gap: 20px;
+  }
+}
